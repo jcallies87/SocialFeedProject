@@ -7,6 +7,11 @@ const CreatePost = (props) => {
 
     function handleSubmit(formEvent){
         formEvent.preventDefault();
+        let newEntry = {
+            name: name,
+            post: post
+        }
+        props.addNewEntry(newEntry)
     }
 return (
 <form onSubmit ={handleSubmit}>

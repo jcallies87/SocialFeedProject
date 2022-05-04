@@ -1,10 +1,15 @@
 import React, {useState} from "react";
-import StatusButton from "./Post"
+
 import CreatePost from "./CreatePost"
-import DisplayPost from "./DisplayPost"
+import Post from "./Post"
 function App() {
 
   const [enteries, setEntries] =useState([{name: '', post:''}])
+  function addNewEntry(entry){
+    let tempEntries = [...entry, entry]
+    setEntries(tempEntries)
+  }
+  
   const [status,setStatus ] = useState('Inactive');
   function changeStatus(newStatus){
       setStatus(newStatus);
@@ -13,8 +18,8 @@ function App() {
     <div>
       <h3>Social Feed</h3>
       
-      <CreatePost/>
-      <DisplayPost Savedpost={enteries}/>
+      <CreatePost addNewEntry= {addNewEntry}/>
+      <Post savedPost={enteries}/>
     </div>
   );
 }

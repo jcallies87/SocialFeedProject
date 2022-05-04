@@ -10,7 +10,7 @@ return (
             </tr>
         </thread>
         <tbody>
-            {props.savedpost.map((entry) => {
+            {props.savedPost.map((entry) => {
                 return (
                     <tr>
                         <td>{entry.name}</td>
