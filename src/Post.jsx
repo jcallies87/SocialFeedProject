@@ -5,8 +5,6 @@ import"./app.css"
 
 
 
-
-
 const StatusButton = (props) => {
     const [likeButton, setLikeButton] = useState("Like-Dislike");
   

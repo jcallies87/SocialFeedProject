@@ -14,6 +14,7 @@ return (
     <input type= "text" onChange={(event) => setName(event.target.value)}value={name}/>
     <label for= "post">Post:</label>
     <input type= "textarea" onChange={(event) => setPost(event.target.value)}value={post}/>
+    <button type='submit'> Post </button>
 </form>  
 );
 }
