@@ -32,8 +32,12 @@ const Post = (props) => {
                             <td>{entry.post}</td>
                             <button className={likeButton} onClick={handleClick}>{likeButton}</button>
                         </tr>
-                    )
-                } )}
+
+
+                    );
+
+                
+                },  )}
             </tbody>
 
         </table>

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import CreatePost from "./CreatePost"
 import Post from "./Post"
 
+
 function App() {
 
   const [enteries, setEntries] =useState([{name: '', post:''}])
@@ -10,10 +11,10 @@ function App() {
     let tempEntries = [...enteries, entry];
     setEntries(tempEntries)
   }
-  
   const [status,setStatus ] = useState('Inactive');
   function changeStatus(newStatus){
       setStatus(newStatus);
+
   }
   return (
     <div>
