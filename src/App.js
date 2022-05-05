@@ -1,12 +1,13 @@
 import React, {useState} from "react";
-
 import CreatePost from "./CreatePost"
 import Post from "./Post"
+
 function App() {
 
   const [enteries, setEntries] =useState([{name: '', post:''}])
+  
   function addNewEntry(entry){
-    let tempEntries = [...entry, entry]
+    let tempEntries = [...enteries, entry];
     setEntries(tempEntries)
   }
   
@@ -17,9 +18,11 @@ function App() {
   return (
     <div>
       <h3>Social Feed</h3>
-      
-      <CreatePost addNewEntry= {addNewEntry}/>
+      <CreatePost createPost= {addNewEntry}/>
       <Post savedPost={enteries}/>
+
+    
+      
     </div>
   );
 }

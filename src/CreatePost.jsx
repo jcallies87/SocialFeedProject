@@ -11,7 +11,7 @@ const CreatePost = (props) => {
             name: name,
             post: post
         }
-        props.addNewEntry(newEntry)
+        props.createPost(newEntry)
     }
 return (
 <form onSubmit ={handleSubmit}>
